@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.juno.persistence.BookMapper">
+  <select id="getList" resultType="org.juno.domain.BookVO">
+		select * from Book;
+	</select>
+	<select id="get" resultType="org.juno.domain.BookVO">
+		select * from Book where bookId=#{bookId}
+	</select>
+</mapper>
